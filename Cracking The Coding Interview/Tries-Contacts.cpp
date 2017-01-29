@@ -42,6 +42,7 @@ int main(){
     int n;
     cin >> n;
     vector<string> contacts;
+    vector<int> answers;
     for(int a0 = 0; a0 < n; a0++){
         string op;
         string contact;
@@ -49,8 +50,11 @@ int main(){
         if(op.compare("add") == 0)
             addContact(contact, contacts);
         else
-            cout<<findContacts(contact, contacts)<<"\n";
+            answers.insert(answers.begin(),findContacts(contact, contacts));
+            //cout<<findContacts(contact, contacts)<<"\n";
     }
+    for(int i=0;i<answers.size();i++)
+        cout<<answers[i]<<"\n";
     return 0;
 }
 #include <map>
@@ -97,6 +101,7 @@ int main(){
     int n;
     cin >> n;
     vector<string> contacts;
+    vector<int> answers;
     for(int a0 = 0; a0 < n; a0++){
         string op;
         string contact;
@@ -104,7 +109,10 @@ int main(){
         if(op.compare("add") == 0)
             addContact(contact, contacts);
         else
-            cout<<findContacts(contact, contacts)<<"\n";
+            answers.insert(answers.begin(),findContacts(contact, contacts));
+            //cout<<findContacts(contact, contacts)<<"\n";
     }
+    for(int i=0;i<answers.size();i++)
+        cout<<answers[i]<<"\n";
     return 0;
 }
